@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Drag and Drop Train Carriages</title>
+    <style>
+        #toolbar {
+        margin: 10px 0;
+        padding: 10px;
+        background-color: #eee;
+      }
+      .carriage {
+        display: inline-block;
+        margin: 5px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        background-image: url(/ima/002.png);
+        background-size: cover;
+        cursor: move;
+        text-align: center;
+        color: #333;
+        font-weight: bold;
+        width: 100px;
+        height: 80px;
+        object-fit: cover;
+      }
+
+      #train {
+        margin: 20px;
+        padding: 10px;
+        border: 1px solid #000;
+        min-height: 100px;
+        white-space: nowrap;
+        overflow-x: auto;
+      }
+
+      #train .carriage:first-child {
+        background-image: url(/ima/001.png);
+        background-size: cover;
+        /* Add any other background styles you may need */
+      }
+      #train .carriage:last-child {
+        background-image: url(/ima/003.png);
+        background-size: cover;
+        /* Add any other background styles you may need */
+      }
+    </style>
+</head>
+<body>
+
+<div id="toolbar">
+    <button onclick="addCarriage()">เพิ่มโบกี้</button>
+    <button onclick="removeAllCarriages()">ลบทั้งหมด</button>
+    <span id="carriageCountDisplay">จำนวนโบกี้: 0</span>
+</div>
+<div id="train">
+    <!-- โบกี้รถไฟจะถูกเพิ่มที่นี่ -->
+</div>
+
+
+<script src="dragdrop.js"></script>
+</body>
+</html>
